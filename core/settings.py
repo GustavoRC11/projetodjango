@@ -72,7 +72,19 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
-
+'''
+configurações para MYSQL
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bd_django',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        'PORT' : '3306',
+        'OPTIONS' : 'charset' ':' 'utf8mb4',
+    }
+}
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -126,3 +138,6 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+
+SITENAME = 'Projetoup'

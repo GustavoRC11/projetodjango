@@ -72,16 +72,19 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
-'''
-configurações para MYSQL
+
+#configurações para MYSQL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bd_django',
         'USER' : 'root',
-        'PASSWORD' : '',
+        'PASSWORD' : 'toor',
+        'HOST' : '127.0.0.1',
         'PORT' : '3306',
-        'OPTIONS' : 'charset' ':' 'utf8mb4',
+        'OPTIONS' : {
+            'charset' : 'utf8mb4',
+        },
     }
 }
 '''
@@ -91,7 +94,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators

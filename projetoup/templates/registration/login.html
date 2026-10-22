@@ -1,0 +1,17 @@
+{% extends 'projetoup/_base.html' %}
+
+{% block titulo %}Login{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Login</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+       <p><button type="submit">Entrar</button></p>
+    </form>
+
+</section>
+
+{% endblock %}

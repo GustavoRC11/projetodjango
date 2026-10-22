@@ -62,6 +62,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'projetoup.context_processors.global_context'
             ],
         },
     },
@@ -143,4 +144,9 @@ MAILERS = {
 }
 
 
+# Redirecionamento da autenticação
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+# Dados de ProjectUs
 SITENAME = 'Projetoup'

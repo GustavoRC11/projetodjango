@@ -150,3 +150,18 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # Dados de ProjectUs
 SITENAME = 'Projetoup'
+
+MAILERS = {
+    'default': {
+        'BACKEND': 'django.core.mail.backends.smtp.EmailBackend',
+        'OPTIONS': {
+            'host': 'smtp.gmail.com',
+            'port': 587,
+            'username': 'gustavoribeiro117445@gmail.com',
+            'password': 'abcd fghi jlmn opqr',
+            'use_tls': True,
+            'use_ssl': False,
+            'timeout': 20,
+        },
+    },
+}

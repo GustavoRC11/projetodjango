@@ -31,13 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'projetoup',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'projetoup'
+    
 ]
 
 MIDDLEWARE = [
@@ -119,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -139,7 +140,16 @@ STATIC_URL = 'static/'
 
 MAILERS = {
     'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+        'BACKEND': 'django.core.mail.backends.smtp.EmailBackend',
+        'OPTIONS': {
+            'host': 'smtp.gmail.com',
+            'port': 587,
+            'username': 'gustavoribeiro117445@gmail.com',
+            'password': 'zfqt sjrk jgef ifkt',
+            'use_tls': True,
+            'use_ssl': False,
+            'timeout': 20,
+        },
     },
 }
 
@@ -150,18 +160,4 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # Dados de ProjectUs
 SITENAME = 'Projetoup'
-
-MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.smtp.EmailBackend',
-        'OPTIONS': {
-            'host': 'smtp.gmail.com',
-            'port': 587,
-            'username': 'gustavoribeiro117445@gmail.com',
-            'password': 'abcd fghi jlmn opqr',
-            'use_tls': True,
-            'use_ssl': False,
-            'timeout': 20,
-        },
-    },
-}
+SITE_ID = 1

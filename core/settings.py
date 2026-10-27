@@ -145,7 +145,7 @@ MAILERS = {
             'host': 'smtp.gmail.com',
             'port': 587,
             'username': 'gustavoribeiro117445@gmail.com',
-            'password': 'zfqt sjrk jgef ifkt',
+            'password': 'jolj avxh koli pmsv',
             'use_tls': True,
             'use_ssl': False,
             'timeout': 20,

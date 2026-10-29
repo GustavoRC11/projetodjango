@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['blogdevweb.pythonanywhere.com']
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_collected')
+STATIC_ROOT = BASE_DIR / 'static_collected'
 
 # Application definition
 
